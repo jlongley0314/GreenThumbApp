@@ -11,8 +11,8 @@ import Foundation
 class Plant: NSObject {
     
     var id: String?             // randomly generated uuid for database purposes
-    var imagePath: String?      // generated from the id
-    var progressPhotos: [String]? // List of the image paths
+    var created: Date?
+    var modified: Date?
     var name: String?           // coloquial name for the plant
     var scientificName: String? // Latin name
     var lastWatered: Date?
@@ -24,5 +24,10 @@ class Plant: NSObject {
     var ownedLength: TimeInterval?    // How best to generate the length of time owned
     var height: Int?            // Inches
    
-    
+    convenience init(key: String) {
+        self.init()
+        self.id = key
+        self.created = Date()
+        self.markModified()
+    }
 }

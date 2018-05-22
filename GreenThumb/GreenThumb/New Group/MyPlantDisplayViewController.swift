@@ -11,11 +11,19 @@ import UIKit
 class MyPlantsDisplayViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var displayPlantsCollections: UICollectionView!
-    var allPlants: [Plant]?
+    var allPlants: [Plant]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.displayPlantsCollections.dataSource = self
+        
+        // Dummy plants for testing purposes
+        var plant1 = Plant(key: "1")
+        plant1.name = "Aloe Vera"
+        var plant2 = Plant(key: "2")
+        plant2.name = "Banana Plant"
+        self.allPlants?.append(plant1)
+        self.allPlants?.append(plant2)
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,18 +32,20 @@ class MyPlantsDisplayViewController: UIViewController, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if let plants = self.allPlants {
-//            return plants.count
-//        } else {
-//            return 0
-//        }
-        return 1
+        if let plants = self.allPlants {
+            return plants.count
+        } else {
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DisplayPlantCell", for: indexPath) as? DisplayPlantCell else {
             fatalError("Cannot find DisplayPlantCell")
         }
+        
+        var plant = self.allPlants![indexPath.item]
+        cell.plantTypeLabel.text = plant.name
         
         return cell
     }
