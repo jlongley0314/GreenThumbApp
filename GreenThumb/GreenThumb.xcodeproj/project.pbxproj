@@ -19,6 +19,8 @@
 		6FB9058020AF23E900E2AED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB9057F20AF23E900E2AED5 /* Main.storyboard */; };
 		6FB9058320AF2C2600E2AED5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB9058220AF2C2600E2AED5 /* RoundButton.swift */; };
 		6FB9AF5D20B457750024A1D9 /* PlantExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB9AF5C20B457750024A1D9 /* PlantExtended.swift */; };
+		6FB9AF5F20B45BF20024A1D9 /* AddPlant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB9AF5E20B45BF20024A1D9 /* AddPlant.storyboard */; };
+		6FB9AF6120B45EAB0024A1D9 /* AddPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB9AF6020B45EAB0024A1D9 /* AddPlantsViewController.swift */; };
 		F957ED155B58888B0E7C557C /* Pods_GreenThumbTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD1608E88597FE5E5CFB75A /* Pods_GreenThumbTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		6FB9057F20AF23E900E2AED5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6FB9058220AF2C2600E2AED5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = "GreenThumb/New Group2/RoundButton.swift"; sourceTree = SOURCE_ROOT; };
 		6FB9AF5C20B457750024A1D9 /* PlantExtended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantExtended.swift; sourceTree = "<group>"; };
+		6FB9AF5E20B45BF20024A1D9 /* AddPlant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPlant.storyboard; sourceTree = "<group>"; };
+		6FB9AF6020B45EAB0024A1D9 /* AddPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantsViewController.swift; sourceTree = "<group>"; };
 		84B553306890D35994FE5235 /* Pods-GreenThumbUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenThumbUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GreenThumbUITests/Pods-GreenThumbUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A65E5A1F2122DD2725EFD2F1 /* Pods-GreenThumb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenThumb.release.xcconfig"; path = "Pods/Target Support Files/Pods-GreenThumb/Pods-GreenThumb.release.xcconfig"; sourceTree = "<group>"; };
 		B47F6B1795CE89A8DB99C403 /* Pods_GreenThumb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenThumb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				6FB9057C20AF22AE00E2AED5 /* MyPlantDisplayViewController.swift */,
+				6FB9AF6020B45EAB0024A1D9 /* AddPlantsViewController.swift */,
 			);
 			name = Screens;
 			path = "New Group";
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				6FB9057F20AF23E900E2AED5 /* Main.storyboard */,
+				6FB9AF5E20B45BF20024A1D9 /* AddPlant.storyboard */,
 			);
 			name = Storyboards;
 			path = "New Group2";
@@ -320,6 +326,7 @@
 			files = (
 				6FB9058020AF23E900E2AED5 /* Main.storyboard in Resources */,
 				6FB9055320AE207300E2AED5 /* LaunchScreen.storyboard in Resources */,
+				6FB9AF5F20B45BF20024A1D9 /* AddPlant.storyboard in Resources */,
 				6FB9055020AE207300E2AED5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +431,7 @@
 				6FB9058320AF2C2600E2AED5 /* RoundButton.swift in Sources */,
 				6FB9057A20AF223300E2AED5 /* Plant.swift in Sources */,
 				6FB9054920AE207100E2AED5 /* AppDelegate.swift in Sources */,
+				6FB9AF6120B45EAB0024A1D9 /* AddPlantsViewController.swift in Sources */,
 				6FB9057D20AF22AE00E2AED5 /* MyPlantDisplayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

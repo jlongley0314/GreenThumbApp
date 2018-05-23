@@ -8,10 +8,12 @@
 
 import UIKit
 
-class MyPlantsDisplayViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MyPlantsDisplayViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var displayPlantsCollections: UICollectionView!
     var allPlants: [Plant]? = []
+    var imagePicker: UIImagePickerController!
+    var imageTaken: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +51,28 @@ class MyPlantsDisplayViewController: UIViewController, UICollectionViewDataSourc
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let vc = segue.destination as? AddPlantsViewController {
+//            vc.addPlantBackgroundImage?.image = self.imageTaken
+//        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil)
+        self.imageTaken = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.performSegue(withIdentifier: "AddPlant", sender: self)
+    }
+    
+    @IBAction func takePhoto(sender: UIButton) {
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .camera
+        self.performSegue(withIdentifier: "AddPlant", sender: self)
+//        present(imagePicker, animated: true, completion: nil)
+    }
+    
+   
 }
 
 class DisplayPlantCell: UICollectionViewCell {
